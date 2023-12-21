@@ -262,6 +262,7 @@ const subd = document.getElementById('sub_domain1').value;
      
     
     let r =document.getElementById('result').value;
+	document.getElementById('result').value ="All records are updated you can find it bellow in (All IN ONE) section ..GOOD LUCK!";
     // let r = "test";
 	all.value = `-----ALL RECORDS----\n`+`${subd}.${dom},v=spf1 ${h} -all\n\n${result2}\n`+`\n---------\n`+r;
     setTimeout(function () {
