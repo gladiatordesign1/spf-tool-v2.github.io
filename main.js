@@ -253,8 +253,8 @@ const subd = document.getElementById('sub_domain1').value;
         let allType="-all";
         let aPart="a:";
 		const main8sub = document.querySelectorAll('.sub_domain');
-        result2 += `${subd}0.${dom},v=spf1${domainGroup2.map(domain2 => ` ${domain2}`).join('')} ${allType} \n`;
-        generated_doms2 += `include:${subd}0.${dom}\n`;
+        result2 += `${subd}0${count}.${dom},v=spf1${domainGroup2.map(domain2 => ` ${domain2}`).join('')} ${allType} \n`;
+        generated_doms2 += `include:${subd}0${count}.${dom}\n`;
           
      }
      let h =generated_doms2.trim().replace(/\n/g, ' ');
