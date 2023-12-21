@@ -31,6 +31,7 @@ let alldoms = "";
 let generated_doms_include = '';
 let dom = "";
 let sub = "";
+let res = "";
 function processDomains() {
     // const inputDomains = document.getElementById('domains').value.split('\n').map(domain => domain.trim());
     let inputDomains = document.getElementById('domains').value.split('\n').map(domain => domain.trim());
@@ -114,7 +115,7 @@ function processDomains() {
 			dom = spf_domain;
 			// sub = `${sub_domain.value}`;
         }
-
+        res = result;
 
     }
 
@@ -260,8 +261,9 @@ const subd = document.getElementById('sub_domain1').value;
      let h =generated_doms2.trim().replace(/\n/g, ' ');
      
     
-   // all.value = `${sub}.${dom},v=spf1 ${h} -all\n\n${generated_doms2}\n${result2}`;
-	all.value = `${subd}.${dom},v=spf1 ${h} -all\n\n${result2}`;
+    let r =document.getElementById('result').value;
+    // let r = "test";
+	all.value = `-----ALL RECORDS----\n`+`${subd}.${dom},v=spf1 ${h} -all\n\n${result2}\n`+`\n---------\n`+r;
     setTimeout(function () {
         var pop = document.querySelector('.modal');
         pop.style.visibility = 'hidden';
