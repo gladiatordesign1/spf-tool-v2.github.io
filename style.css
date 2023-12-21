@@ -38,7 +38,7 @@ label {
     font-weight: bold;
 }
 
-#domains {
+#domains,#new_records3 {
     resize: none;
 }
 
