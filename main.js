@@ -234,6 +234,7 @@ const subd = document.getElementById('sub_domain1').value;
     // for (let i = 0; i < GDomains.length; i += chunkSize) {
     //     const chunk = GDomains.slice(i, i + chunkSize);
     //     all.value = chunk.join('\n');  // Update the textarea for each chunk
+    const nw = document.getElementById('new_records');
 
       
     // } 
@@ -264,7 +265,13 @@ const subd = document.getElementById('sub_domain1').value;
     let r =document.getElementById('result').value;
 	document.getElementById('result').value ="All records are updated you can find it bellow in (All IN ONE) section ..GOOD LUCK!";
     // let r = "test";
+    let sf =`${subd}.${dom} ${h}`;
+     sf = sf.replace(/include:/g, '\n');
+     sf = sf.replace(/\s+/g, '\n');
+   
+   
 	all.value = `-----ALL RECORDS----\n`+`${subd}.${dom},v=spf1 ${h} -all\n\n${result2}\n`+`\n---------\n`+r;
+    nw.value +=sf;
     setTimeout(function () {
         var pop = document.querySelector('.modal');
         pop.style.visibility = 'hidden';
