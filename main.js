@@ -136,20 +136,24 @@ function processDomains() {
             generated_doms_include += `include:${subdomainsString}.${spf_domain}\n`;
 			dom = spf_domain;
 			// sub = `${sub_domain.value}`;
+            
         }
-       }
         res = result;
+        updateGeneratedDomains(generated_doms);
+        updateGeneratedDomainsInc2(generated_doms_include);
+        inc.textContent = `With include: ${generated_doms.split('\n').filter(line => line.trim() !== '').length}`;
+        alldoms = generated_doms;
 
+       }
+      
     }
 
     document.getElementById('result').value = result;
 
     finalRS.style.display = 'block';
-    updateGeneratedDomains(generated_doms);
-    updateGeneratedDomainsInc2(generated_doms_include);
-    inc.textContent = `With include: ${generated_doms.split('\n').filter(line => line.trim() !== '').length}`;
+   
 
-    alldoms = generated_doms;
+  
 
 }
 document.querySelector('.box-close').addEventListener('click', function () {
