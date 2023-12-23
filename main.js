@@ -99,8 +99,30 @@ function processDomains() {
             });
         }
 
-       
+       if(spf_domain ==="test" || sub_domains ==="test")
+       {
         if (!!ipClass) {
+
+            result += `,v=spf1${domainGroup.map(domain => ` ${aPart}${domain}/${ipClass}`).join('')} ${allType} \n`;
+            generated_doms += `${subdomainsString}.${spf_domain}\n`;
+            generated_doms_include += `include:${subdomainsString}.${spf_domain}\n`;
+			dom = spf_domain;
+			
+        }
+		//sub = `${sub_domain.value}`;
+        else {
+            result += `,v=spf1${domainGroup.map(domain => ` ${aPart}${domain}`).join('')} ${allType} \n`;
+            generated_doms += `${subdomainsString}.${spf_domain}\n`;
+            generated_doms_include += `include:${subdomainsString}.${spf_domain}\n`;
+			dom = spf_domain;
+			// sub = `${sub_domain.value}`;
+        }
+       }
+
+       else
+       {
+        if (!!ipClass) {
+
             result += `${subdomainsString}.${spf_domain},v=spf1${domainGroup.map(domain => ` ${aPart}${domain}/${ipClass}`).join('')} ${allType} \n`;
             generated_doms += `${subdomainsString}.${spf_domain}\n`;
             generated_doms_include += `include:${subdomainsString}.${spf_domain}\n`;
@@ -115,6 +137,7 @@ function processDomains() {
 			dom = spf_domain;
 			// sub = `${sub_domain.value}`;
         }
+       }
         res = result;
 
     }
