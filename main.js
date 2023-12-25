@@ -297,7 +297,7 @@ document.getElementById('result').value ="All records are updated you can find i
    sf = sf.replace(/\s+/g, '\n');
  
  
-all.value = `-----ALL RECORDS----\n`+`${subd}.${dom},v=spf1 ${h} -all\n\n${result2}\n`+r;
+all.value = `-----ALL RECORDS----\n`+`${subd}.${dom},v=spf1 ${h} -all\n\n${result2}\n`+`\n\n`+r;
   nw.value +=sf;
   setTimeout(function () {
       var pop = document.querySelector('.modal');
