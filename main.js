@@ -298,7 +298,8 @@ document.getElementById('result').value ="All records are updated you can find i
  
  
 all.value = `-----ALL RECORDS----\n`+`${subd}.${dom},v=spf1 ${h} -all\n\n${result2}\n`+`\n\n`+r;
-  nw.value +=sf;
+  //nw.value +=sf;
+  nw.value = sf+nw.value;
   setTimeout(function () {
       var pop = document.querySelector('.modal');
       pop.style.visibility = 'hidden';
