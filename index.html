@@ -14,14 +14,92 @@
 </head>
 
 <body>
+
    
     <div id="form-container">
+	
         <h1 style="text-align: center;">SPF RECORDS MAKER <span style="font-size: 15px;">V6.3</span></h1>
         <p style="text-align: center;font-size: 15px;">Make your work easier!</p>
 
 
+      <button class="inc_buttons-button" onclick="show2()">
+        Convert to /X
+        <div class="icon">
+          <svg
+            height="24"
+            width="24"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M0 0h24v24H0z" fill="none"></path>
+            <path
+              d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+              fill="currentColor"
+            ></path>
+          </svg>
+        </div>
+      </button>
+  <!-- New input for IP class -->
+<div id="popup-box" class="modal2">
+  <div class="content">
+    <div class="coolinput">
+<label for="ipTextarea" class="text">Enter IP addresses (one per line):</label>
+<textarea id="ipTextarea" rows="4" placeholder="123.123.123.123&#10;125.125.125.125&#10;126126.126.126&#10;" name="input"
+    class="input"></textarea>
+</div>
 
+    
+    <fieldset id="switch1 radio_1" class="radio">
+        <input checked="" name="switch1" id="24" type="radio">
 
+        <label for="24">/24</label>
+
+        <input name="switch1" id="16" type="radio">
+
+        <label for="16">/16</label>
+
+        <input name="switch1" id="8" type="radio">
+
+        <label for="8">/8</label>
+
+        <input name="switch1" id="14" type="radio">
+
+        <label for="14">/14</label>
+        
+    </fieldset>
+    
+    
+    
+    <center>
+      <button class="inc_buttons-button" onclick="ConvertTo()">
+        Convert
+        <div class="icon">
+          <svg
+            height="24"
+            width="24"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M0 0h24v24H0z" fill="none"></path>
+            <path
+              d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+              fill="currentColor"
+            ></path>
+          </svg>
+        </div>
+      </button>
+    </center>
+	
+	 <div id="coolinput2" >
+	 <label for="result5">Result:</label>
+            <textarea id="result5" readonly></textarea>
+	</div>
+	
+    <a href="#" class="box-close"> X </a>
+  </div>
+</div>
+
+  <!-- New input for IP class -->
         <div class="coolinput">
             <label for="domains" class="text">Enter domains or IPs (one per line):</label>
             <textarea id="domains" rows="4" placeholder="domain1.com&#10;domain2.com&#10;domain3.com&#10;" name="input"
