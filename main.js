@@ -317,7 +317,7 @@ function ConvertTo() {
             result = [...new Set(result)];
 
             document.getElementById("coolinput2").style.display="block";
-            document.getElementById("result5").va = result.join('\n');
+            document.getElementById("result5").value = result.join('\n');
         }
   
   function showGeneratedDomsInclude() {
