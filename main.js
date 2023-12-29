@@ -265,11 +265,6 @@ function ConvertTo() {
             var ipAddresses = document.getElementById("ipTextarea").value.trim().split('\n');
             const selectedRadio = document.querySelector('input[name="switch1"]:checked');
             var result="";
-			if(ipAddresses==="")
-			{
-				  showAlert('Please fill in all required fields.');
-				  return;
-			}
            if(selectedRadio && (selectedRadio.id==="8"))
            {
             result = ipAddresses.map(function(ip)
@@ -322,7 +317,7 @@ function ConvertTo() {
             result = [...new Set(result)];
 
             document.getElementById("coolinput2").style.display="block";
-            document.getElementById("result5").value = result.join('\n');
+            document.getElementById("result5").va = result.join('\n');
         }
   
   function showGeneratedDomsInclude() {
@@ -382,4 +377,15 @@ function ConvertTo() {
         pop.style.visibility = 'hidden';
         pop.style.opacity = '0';
     }, 1000);
+  }
+
+
+
+  function close1()
+  {
+    setTimeout(function () {
+        var pop1 = document.querySelector('.modal2');
+        pop1.style.visibility = 'hidden';
+        pop1.style.opacity = '0';
+    }, 100);
   }
