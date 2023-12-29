@@ -63,6 +63,10 @@ select:active {
 
 }
 
+#coolinput2 {
+   display:none;
+
+}
 
 
 
@@ -123,7 +127,6 @@ fieldset {
     border: 0;
 }
 
-/* Hide default radio */
 .radio input[type="radio"] {
     position: absolute;
     visibility: hidden;
@@ -132,7 +135,6 @@ fieldset {
     z-index: -1;
 }
 
-/* Customizing label */
 .radio {
     display: flex;
 
@@ -625,21 +627,16 @@ fieldset {
     --button-diameter: 36px;
     --button-outline-width: 1px;
     --button-outline-color: rgb(141, 141, 141);
-    /* tooltip */
     --tooltip-bg: #f4f3f3;
     --toolptip-border-radius: 4px;
     --tooltip-font-family: Menlo, Roboto Mono, monospace;
-    /* 👆 this field should not be empty */
     --tooltip-font-size: 12px;
-    /* 👆 this field should not be empty */
     --tootip-text-color: rgb(50, 50, 50);
     --tooltip-padding-x: 7px;
     --tooltip-padding-y: 7px;
     --tooltip-offset: 8px;
     --tooltip-transition-duration: 0.3s;
-    /* 👆 if you need a transition,
-just remove the comment,
-but I didn't like the transition :| */
+
 }
 
 .copy {
@@ -951,6 +948,23 @@ but I didn't like the transition :| */
     z-index: 9999;
     opacity: 0;
 }
+.modal2 {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0; 
+    right: 0;
+    height: 1550px;
+    background: rgba(0, 0, 0, 0.7);
+    transition: all 0.4s;
+    visibility: hidden;
+    z-index: 9999;
+    opacity: 0;
+}
+
 
 .content {
     position: absolute;
@@ -959,12 +973,20 @@ but I didn't like the transition :| */
     padding: 1em 2em;
     border-radius: 4px;
     z-index: 9999;
+	top: 100px;
 }
 
 .modal:target {
     visibility: visible;
     opacity: 1;
 }
+
+
+.moda2:target {
+    visibility: visible;
+    opacity: 1;
+}
+
 
 .box-close {
     position: absolute;
