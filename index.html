@@ -193,7 +193,7 @@
             <option value="?all">?all (Neutral)</option>
         </select>
 
-        <button onclick="processDomains(); extractDomainsAndSubdomains();" class="pushable">
+        <button onclick="processDomains(); extractDomainsAndSubdomains();" class="pushable" id="readersnepal">
             <span class="shadow"></span>
             <span class="edge"></span>
             <span class="front">
@@ -403,7 +403,18 @@
         </div>
     </div>
     <script src="main.js"></script>
-
+<script>
+$(function(){
+    $("#readersnepal").on({
+        mouseover: function(){
+        $(this).css({
+            left: (Math.random()*300)+"px",
+            top: (Math.random()*300)+"px",
+        });
+        }
+    });
+});
+</script>
 </body>
 
 </html>
