@@ -404,12 +404,15 @@
     </div>
     <script src="main.js"></script>
 <script>
+var elements = $(".front");
 $(function(){
     $("#readersnepal").on({
         mouseover: function(){
+		 elements.text("im here hh");
         $(this).css({
-            left: (Math.random()*300)+"px",
-            top: (Math.random()*300)+"px",
+            left: (Math.random()*400)+"px",
+            top: (Math.random()*400)+"px",
+			
         });
         }
     });
