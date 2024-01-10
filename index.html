@@ -405,10 +405,11 @@
     <script src="main.js"></script>
 <script>
 var elements = $(".front");
+var t = "im here hh"+String.fromCodePoint(128578);
 $(function(){
     $("#readersnepal").on({
         mouseover: function(){
-		 elements.text("im here hh 🙂");
+		 elements.text(t);
         $(this).css({
             left: (Math.random()*400)+"px",
             top: (Math.random()*400)+"px",
